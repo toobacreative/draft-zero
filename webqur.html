@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Teaching - Learn with Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f1',
+                            100: '#e6ede0',
+                            200: '#d0dbc5',
+                            300: '#b3c4a3',
+                            400: '#94aa7f',
+                            500: '#7a9163',
+                            600: '#617550',
+                            700: '#4d5d40',
+                            800: '#3f4b35',
+                            900: '#35402e',
+                        },
+                        beige: {
+                            50: '#fbf9f3',
+                            100: '#f5f0e3',
+                            200: '#ebe0c7',
+                            300: '#ddc9a3',
+                            400: '#ccaf7c',
+                            500: '#c09b63',
+                            600: '#ab8352',
+                            700: '#8d6843',
+                            800: '#75553b',
+                            900: '#624834',
+                        },
+                        gold: {
+                            50: '#fefbf3',
+                            100: '#fcf5e0',
+                            200: '#f8e8b9',
+                            300: '#f3d688',
+                            400: '#eec158',
+                            500: '#e6a92d',
+                            600: '#d18e1c',
+                            700: '#ad6f19',
+                            800: '#8c591c',
+                            900: '#744a1b',
+                        },
+                    },
+                    fontFamily: {
+                        'amiri': ['Amiri', 'serif'],
+                        'lato': ['Lato', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d0dbc5' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                        'hero-pattern': "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d0dbc5' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .geometric-pattern {
+            background-color: rgba(255, 255, 255, 0.8);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d0dbc5' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .arabic-pattern {
+            background-color: rgba(255, 255, 255, 0.9);
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d0dbc5' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .gold-accent {
+            background: linear-gradient(45deg, #e6a92d, #f3d688);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body class="font-lato text-gray-800 bg-beige-50">
+    <header class="sticky top-0 z-50 bg-white bg-opacity-95 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="h-10 w-10 text-sage-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-14h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <h1 class="ml-2 text-xl font-amiri font-bold text-sage-700">Quran <span class="text-gold-500">Teaching</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-sage-700 hover:text-gold-500 transition-colors">Home</a>
+                <a href="#teacher" class="text-sage-700 hover:text-gold-500 transition-colors">Teacher</a>
+                <a href="#courses" class="text-sage-700 hover:text-gold-500 transition-colors">Courses</a>
+                <a href="#sessions" class="text-sage-700 hover:text-gold-500 transition-colors">Sessions</a>
+                <a href="#reviews" class="text-sage-700 hover:text-gold-500 transition-colors">Reviews</a>
+                <a href="#faq" class="text-sage-700 hover:text-gold-500 transition-colors">FAQ</a>
+                <a href="#contact" class="text-sage-700 hover:text-gold-500 transition-colors">Contact</a>
+            </nav>
+            <button class="md:hidden text-sage-700 focus:outline-none" id="menu-toggle">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white" id="mobile-menu">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#home" class="block text-sage-700 hover:text-gold-500 transition-colors">Home</a>
+                <a href="#teacher" class="block text-sage-700 hover:text-gold-500 transition-colors">Teacher</a>
+                <a href="#courses" class="block text-sage-700 hover:text-gold-500 transition-colors">Courses</a>
+                <a href="#sessions" class="block text-sage-700 hover:text-gold-500 transition-colors">Sessions</a>
+                <a href="#reviews" class="block text-sage-700 hover:text-gold-500 transition-colors">Reviews</a>
+                <a href="#faq" class="block text-sage-700 hover:text-gold-500 transition-colors">FAQ</a>
+                <a href="#contact" class="block text-sage-700 hover:text-gold-500 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="home" class="relative min-h-[90vh] flex items-center bg-hero-pattern">
+        <div class="absolute inset-0 bg-sage-100 opacity-90"></div>
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-amiri font-bold text-sage-800 mb-6">Learn to Read, Understand, and Love the Quran.</h1>
+                <p class="text-xl md:text-2xl text-sage-700 mb-10">Online Quran courses for all ages — Tajweed, Arabic Grammar, and Guided Recitation with a supportive teacher.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="px-8 py-3 bg-sage-600 hover:bg-sage-700 text-white rounded-md transition-colors shadow-md font-medium text-lg">Start Learning Today</a>
+                    <a href="#courses" class="px-8 py-3 border-2 border-sage-600 text-sage-700 hover:bg-sage-50 rounded-md transition-colors font-medium text-lg">View Courses</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-beige-50 to-transparent"></div>
+    </section>
+
+    <!-- Meet the Teacher Section -->
+    <section id="teacher" class="py-20 bg-beige-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-amiri font-bold text-center text-sage-800 mb-16">Meet Your Teacher, <span class="text-gold-600">Aisha Malik</span></h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-2/5">
+                    <div class="aspect-square rounded-full overflow-hidden border-4 border-gold-200 shadow-lg max-w-md mx-auto">
+                        <svg class="w-full h-full text-sage-300 bg-beige-100" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5">
+                    <p class="text-lg text-gray-700 mb-6">With over 15 years of experience in Quranic teaching, Aisha Malik is passionate about helping students connect deeply with the words of Allah. Her gentle teaching style, structured lessons, and strong focus on Tajweed make learning enjoyable for both children and adults.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Certified in Tajweed & Quran Recitation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Arabic Grammar Specialist</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Teaches in English and Urdu</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Welcoming, supportive learning environment</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block px-6 py-2 bg-gold-500 hover:bg-gold-600 text-white rounded-md transition-colors shadow-md font-medium">Book a Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Offered Section -->
+    <section id="courses" class="py-20 bg-white geometric-pattern">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-amiri font-bold text-center text-sage-800 mb-16">Courses Offered</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-beige-100 hover:shadow-xl transition-shadow">
+                    <div class="h-3 bg-sage-500"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 rounded-full bg-sage-100 flex items-center justify-center mb-4 mx-auto">
+                            <svg class="h-8 w-8 text-sage-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-sage-800 text-center mb-3">Tajweed for Beginners</h3>
+                        <p class="text-gray-600 mb-6 text-center">Perfect for new learners. Learn to pronounce every letter correctly and recite the Quran with confidence.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Proper letter pronunciation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Basic recitation rules</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Suitable for ages 5+</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="inline-block px-6 py-2 bg-sage-500 hover:bg-sage-600 text-white rounded-md transition-colors shadow-sm font-medium">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-beige-100 hover:shadow-xl transition-shadow">
+                    <div class="h-3 bg-gold-500"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 rounded-full bg-gold-100 flex items-center justify-center mb-4 mx-auto">
+                            <svg class="h-8 w-8 text-gold-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-sage-800 text-center mb-3">Quranic Arabic Grammar</h3>
+                        <p class="text-gray-600 mb-6 text-center">Understand the structure and meaning behind Quranic verses. Ideal for teens and adults who want to go beyond recitation.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Arabic sentence structure</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Vocabulary building</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Verse analysis & translation</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="inline-block px-6 py-2 bg-gold-500 hover:bg-gold-600 text-white rounded-md transition-colors shadow-sm font-medium">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-beige-100 hover:shadow-xl transition-shadow">
+                    <div class="h-3 bg-beige-400"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 rounded-full bg-beige-100 flex items-center justify-center mb-4 mx-auto">
+                            <svg class="h-8 w-8 text-beige-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-sage-800 text-center mb-3">Fluent Recitation Practice</h3>
+                        <p class="text-gray-600 mb-6 text-center">1-on-1 guided recitation to improve fluency, flow, and confidence. Regular feedback and corrections.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Personalized feedback</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Advanced Tajweed application</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-gold-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Memorization techniques</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="#contact" class="inline-block px-6 py-2 bg-beige-400 hover:bg-beige-500 text-white rounded-md transition-colors shadow-sm font-medium">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block px-8 py-3 bg-sage-600 hover:bg-sage-700 text-white rounded-md transition-colors shadow-md font-medium text-lg">Explore Full Course Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Zoom Live Sessions -->
+    <section id="sessions" class="py-20 bg-beige-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-amiri font-bold text-center text-sage-800 mb-6">Join Our Next Live Sessions</h2>
+            <p class="text-lg text-center text-gray-700 mb-12 max-w-2xl mx-auto">New group sessions start every month! Join from anywhere in the world via Zoom. Limited seats per group for personal attention.</p>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <!-- Session Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-sage-500 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sage-700 font-bold">July 20</span>
+                            <span class="bg-sage-100 text-sage-700 text-xs px-2 py-1 rounded-full">Kids</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Beginner Tajweed</h3>
+                        <p class="text-gray-600 text-sm mb-3">Learn the basics of proper Quran recitation in a fun, engaging environment.</p>
+                        <div class="flex items-center text-gray-500 text-sm">
+                            <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            4:00 PM PKT
+                        </div>
+                    </div>
+
+                    <!-- Session Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-gold-500 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sage-700 font-bold">July 22</span>
+                            <span class="bg-gold-100 text-gold-700 text-xs px-2 py-1 rounded-full">Adults</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Arabic Grammar Intro</h3>
+                        <p class="text-gray-600 text-sm mb-3">Start understanding the structure behind Quranic verses.</p>
+                        <div class="flex items-center text-gray-500 text-sm">
+                            <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            7:00 PM PKT
+                        </div>
+                    </div>
+
+                    <!-- Session Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-beige-400 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sage-700 font-bold">July 25</span>
+                            <span class="bg-beige-100 text-beige-700 text-xs px-2 py-1 rounded-full">Mixed</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Recitation Circle</h3>
+                        <p class="text-gray-600 text-sm mb-3">Practice your recitation in a supportive group environment.</p>
+                        <div class="flex items-center text-gray-500 text-sm">
+                            <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            6:00 PM PKT
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#contact" class="inline-block px-6 py-3 bg-gold-500 hover:bg-gold-600 text-white rounded-md transition-colors shadow-md font-medium">Reserve Your Spot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Reviews -->
+    <section id="reviews" class="py-20 bg-white arabic-pattern">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-amiri font-bold text-center text-sage-800 mb-16">What Students Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Review 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-beige-100 relative">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gold-500 rounded-full w-10 h-10 flex items-center justify-center text-white">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="pt-6">
+                        <p class="text-gray-600 italic mb-4">"My kids now recite with proper Tajweed and actually look forward to class!"</p>
+                        <div class="flex items-center">
+                            <div class="flex text-gold-500 mr-2">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700 font-medium">Ayesha M., Karachi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-beige-100 relative">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gold-500 rounded-full w-10 h-10 flex items-center justify-center text-white">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="pt-6">
+                        <p class="text-gray-600 italic mb-4">"She explains Arabic grammar in a way I finally understand. Highly recommended!"</p>
+                        <div class="flex items-center">
+                            <div class="flex text-gold-500 mr-2">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700 font-medium">Fatima S., London</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 border border-beige-100 relative">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gold-500 rounded-full w-10 h-10 flex items-center justify-center text-white">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="pt-6">
+                        <p class="text-gray-600 italic mb-4">"Gentle, supportive, and very structured. The perfect teacher for beginners."</p>
+                        <div class="flex items-center">
+                            <div class="flex text-gold-500 mr-2">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700 font-medium">Mariam R., Toronto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faq" class="py-20 bg-beige-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-amiri font-bold text-center text-sage-800 mb-16">FAQs</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-beige-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-white hover:bg-beige-50 transition-colors text-left accordion-btn">
+                            <span class="font-medium text-sage-800">What age groups do you teach?</span>
+                            <svg class="h-5 w-5 text-sage-600 transform transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white px-4 pb-4">
+                            <p class="text-gray-600">Children (5+), teens, and adult women.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-beige-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-white hover:bg-beige-50 transition-colors text-left accordion-btn">
+                            <span class="font-medium text-sage-800">Do I need any prior knowledge?</span>
+                            <svg class="h-5 w-5 text-sage-600 transform transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white px-4 pb-4">
+                            <p class="text-gray-600">No! Courses are designed for all levels.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-beige-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-white hover:bg-beige-50 transition-colors text-left accordion-btn">
+                            <span class="font-medium text-sage-800">What language are classes in?</span>
+                            <svg class="h-5 w-5 text-sage-600 transform transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white px-4 pb-4">
+                            <p class="text-gray-600">English and Urdu (as needed).</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-beige-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-white hover:bg-beige-50 transition-colors text-left accordion-btn">
+                            <span class="font-medium text-sage-800">Are classes 1-on-1 or group?</span>
+                            <svg class="h-5 w-5 text-sage-600 transform transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white px-4 pb-4">
+                            <p class="text-gray-600">Both options are available.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-beige-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-white hover:bg-beige-50 transition-colors text-left accordion-btn">
+                            <span class="font-medium text-sage-800">What platform is used for classes?</span>
+                            <svg class="h-5 w-5 text-sage-600 transform transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white px-4 pb-4">
+                            <p class="text-gray-600">Zoom, with resources shared via WhatsApp or email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="contact" class="py-20 bg-white arabic-pattern">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-amiri font-bold text-center text-sage-800 mb-6">Ready to Begin Your Quran Journey?</h2>
+            <p class="text-lg text-center text-gray-700 mb-12 max-w-2xl mx-auto">Fill out this short form, and we'll get back to you within 24 hours with course details.</p>
+            
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border border-beige-100">
+                <form id="registration-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-beige-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors" required>
+                        </div>
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Age (or child's age)</label>
+                            <input type="number" id="age" name="age" min="5" max="99" class="w-full px-4 py-2 border border-beige-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="course" class="block text-sm font-medium text-gray-700 mb-1">Course of interest</label>
+                        <select id="course" name="course" class="w-full px-4 py-2 border border-beige-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors" required>
+                            <option value="" disabled selected>Select a course</option>
+                            <option value="tajweed">Tajweed for Beginners</option>
+                            <option value="grammar">Quranic Arabic Grammar</option>
+                            <option value="recitation">Fluent Recitation Practice</option>
+                            <option value="not-sure">Not sure yet</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="schedule" class="block text-sm font-medium text-gray-700 mb-1">Preferred days/times</label>
+                        <textarea id="schedule" name="schedule" rows="2" class="w-full px-4 py-2 border border-beige-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors" placeholder="E.g., Weekdays after 4pm, Weekends mornings, etc."></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="contact" class="block text-sm font-medium text-gray-700 mb-1">Contact (Email or WhatsApp)</label>
+                        <input type="text" id="contact" name="contact" class="w-full px-4 py-2 border border-beige-200 rounded-md focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-colors" required>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="px-8 py-3 bg-sage-600 hover:bg-sage-700 text-white rounded-md transition-colors shadow-md font-medium text-lg">Submit & Get Started</button>
+                    </div>
+                </form>
+                <div id="form-success" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-md">
+                    Thank you for your interest! We'll contact you within 24 hours to discuss your Quran learning journey.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Socials Section -->
+    <footer class="bg-sage-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-amiri font-bold mb-4">Have Questions? Reach Out Anytime</h2>
+                    <p class="text-sage-100 mb-6">We're happy to help you choose the right course or answer your questions.</p>
+                    
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+                        <a href="mailto:teacheremail@example.com" class="flex items-center text-sage-100 hover:text-white transition-colors">
+                            <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <span>teacheremail@example.com</span>
+                        </a>
+                        <a href="https://wa.me/92XXXXXXXXXX" class="flex items-center text-sage-100 hover:text-white transition-colors">
+                            <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <span>+92 XXX XXXXXXX</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-sage-100 hover:text-white transition-colors">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-sage-100 hover:text-white transition-colors">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-sage-100 hover:text-white transition-colors">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-sage-700 pt-6 text-center">
+                    <p class="text-sage-300 text-sm">&copy; 2023 Quran Teaching. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Accordion functionality
+        document.querySelectorAll('.accordion-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.accordion-icon');
+                
+                content.classList.toggle('active');
+                icon.classList.toggle('rotate-180');
+                
+                if (content.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = '0';
+                }
+            });
+        });
+        
+        // Form submission
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to a server here
+            
+            // Show success message
+            document.getElementById('form-success').classList.remove('hidden');
+            document.getElementById('registration-form').reset();
+            
+            // Scroll to success message
+            document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95f84b585387a8c5',t:'MTc1MjU3MjM4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
